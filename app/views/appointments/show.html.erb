@@ -1,0 +1,7 @@
+<h1>Appointment Details</h1>
+
+<%= link_to @appointment.patient.name, patient_path(@appointment.patient) %>
+has an appointment with
+<%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %>
+on
+<%= @appointment.appointment_datetime.strftime("%B %e, %Y at %H:%M") %>
